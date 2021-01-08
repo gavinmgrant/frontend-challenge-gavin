@@ -1,3 +1,10 @@
+# Instructions to run locally
+
+1. Clone this repo
+2. Install dependencies via `npm install`
+3. Run `npm run start` in the CLI
+4. Open in your browser at `http://localhost:3000`
+
 # Front-end Developer Challenge
 
 This is a simple front-end code challenge created to serve two purposes:
