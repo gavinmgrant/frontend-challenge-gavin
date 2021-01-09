@@ -2,7 +2,7 @@
 
 1. Clone this repo
 2. Install dependencies via `npm install`
-3. Run `npm run start` in the CLI
+3. Run `npm run dev` in the CLI to start development mode
 4. Open in your browser at `http://localhost:3000`
 
 # Front-end Developer Challenge
