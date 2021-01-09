@@ -1,23 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
-export default function Hero() {
-    const [header, setHeader] = useState(null);
-    const [content, setContent] = useState(null);
-    const [cta, setCta] = useState(null);
+export interface HeroProps {
+    header: string;
+    content: string;
+    cta: string;
+    src: string;
+}
 
-    useEffect(() => {
-        fetch("http://localhost:3000/api/cms")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    setHeader(result.header);
-                    setContent(result.content);
-                    setCta(result.cta);
-                }
-            )
-    }, [])
-
+export default function Hero({ header, content, cta, src }: HeroProps) {
     return (
         <section className="bg-gray-100 flex flex-col sm:flex-row md:w-10/12 xl:w-9/12 sm:shadow-xl p-8 sm:p-12 lg:p-14 xl:pr-16 sm:rounded-xl text-center sm:text-left">
             <div className="flex flex-col sm:pr-12 lg:pr-20 xl:pr-32 2xl:pr-44">
@@ -35,9 +26,9 @@ export default function Hero() {
                     </a>
                 </button>
             </div>
-            <div className="">
+            <div>
                 <Image
-                    src="/images/hero.png"
+                    src={src}
                     alt="Star Map by Twinkle in Time"
                     width={573}
                     height={767}
